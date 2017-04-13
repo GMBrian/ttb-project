@@ -18,7 +18,7 @@ function setup() {
 
   // Make theme available for translation
   // Community translations can be found at https://github.com/roots/sage-translations
-  load_theme_textdomain('sage', get_template_directory() . '/lang');
+  load_theme_textdomain('techbakery', get_template_directory() . '/lang');
 
   // Enable plugins to manage the document title
   // http://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
@@ -27,7 +27,8 @@ function setup() {
   // Register wp_nav_menu() menus
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
   register_nav_menus([
-    'primary_navigation' => __('Primary Navigation', 'sage')
+    'primary_navigation' => __('Primaire Navigatie', 'techbakery'),
+    'footer_navigation' => __('Footer Navigatie', 'techbakery')
   ]);
 
   // Enable post thumbnails
@@ -55,40 +56,33 @@ add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
  */
 function widgets_init() {
   register_sidebar([
-    'name'          => __('Primary', 'sage'),
+    'name'          => __('Primaire Zijbalk', 'techbakery'),
     'id'            => 'sidebar-primary',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h3>',
     'after_title'   => '</h3>'
   ]);
-
-  register_sidebar([
-    'name'          => __('Footer', 'sage'),
-    'id'            => 'sidebar-footer',
-    'before_widget' => '<section class="widget %1$s %2$s">',
-    'after_widget'  => '</section>',
-    'before_title'  => '<h3>',
-    'after_title'   => '</h3>'
-  ]);
 }
-add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
+//add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
 
 /**
  * Determine which pages should NOT display the sidebar
  */
 function display_sidebar() {
-  static $display;
+  //static $display;
 
-  isset($display) || $display = !in_array(true, [
+  return false;
+
+  //isset($display) || $display = !in_array(true, [
     // The sidebar will NOT be displayed if ANY of the following return true.
     // @link https://codex.wordpress.org/Conditional_Tags
-    is_404(),
-    is_front_page(),
-    is_page_template('template-custom.php'),
-  ]);
+    //is_404(),
+    //is_front_page(),
+    //is_page_template('template-custom.php'),
+  //]);
 
-  return apply_filters('sage/display_sidebar', $display);
+  //return apply_filters('sage/display_sidebar', $display);
 }
 
 /**

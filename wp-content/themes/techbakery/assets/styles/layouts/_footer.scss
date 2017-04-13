@@ -1,0 +1,64 @@
+.content-info {
+  margin-top: 40px;
+  background-color: #a8a8a8;
+  color: #fff;
+  padding-bottom: 20px;
+
+  .copyright {;
+    padding: 5px;
+  }
+
+  .nav-footer {
+    display: inline-block;
+
+    ul {
+      display: inline-block;
+
+      li {
+        display: inline-block;
+
+        a {
+          color: #fff;
+          padding: 12px 5px 10px 9px;
+
+          &:hover,
+          &:active,
+          &:focus {
+            background-color: transparent;
+          }
+
+          &:before {
+            position: relative;
+            left: -8px;
+            display: inline-block;
+            content: " | ";
+          }
+        }
+      }
+    }
+  }
+
+  .footer-box {
+    position: relative;
+    top: -20px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 28px 15px 15px;
+    text-align: center;
+    color: #a8a8a8;
+
+    .footer-box-content {
+      font-family: "FelbridgeRegular", sans-serif;
+      color: #a8a8a8;
+
+      a {
+        color: #a8a8a8;
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,169 @@
+body .main {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.main {
+
+  .page-header {
+    padding-bottom: 9px;
+    margin: 30px 0 20px;
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 1199px) {
+  .section.section-tekst .entry-content {
+    display: block !important;
+    flex-direction: inherit !important;
+  }
+}
+
+.section {
+  margin-bottom: 50px;
+
+  hr {
+    margin: 50px 100px;
+    border: 0;
+    border-top: 2px solid $brand-primary;
+  }
+
+  .sectie-titel {
+    position: relative;
+    z-index: 5;
+    font-family: "FelbridgeBold", sans-serif;
+    padding: 16px 40px 16px 100px;
+    margin-top: -50px;
+    //border-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 26px;
+    line-height: 26px;
+
+    text-transform: lowercase;
+    background-color: $brand-secundary;
+    color: #fff;
+  }
+
+  &.section-banner {
+    position: relative;
+    min-height: 600px;
+    background-position: center;
+    background-size: cover;
+    //display: flex;
+
+    h2 {
+      color: #fff;
+      font-size: 52px;
+      font-family: "FelbridgeBold", sans-serif;
+      margin-top: 120px;
+    }
+
+    .container {
+      align-items: stretch;
+    }
+
+    .banner-bubble-container {
+      position: absolute;
+      bottom: 0;
+      z-index: 10;
+    }
+
+    .banner-bubble-buttons {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .spraakbubbel-container {
+      position: relative;
+      bottom: 0;
+    }
+
+    .banner-bubble {
+      position: relative;
+      padding: 45px 45px 10px;
+      background-color: #fff;
+      color: $text-primary;
+      line-height: 28px;
+      font-family: "FelbridgeLight", sans-serif;
+    }
+  }
+
+  &.section-tekst {
+    padding: 30px 0;
+
+    .entry-content {
+      display: flex;
+      flex-direction: row;
+
+      .cta-section {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  &.section-tekst_tekst {
+    padding: 30px 0;
+
+    img {
+      border-radius: 200px;
+    }
+  }
+
+  &.section-inhoudslider {
+    background-size: cover;
+    background: no-repeat center;
+    padding: 30px 0;
+    transition: background 1s ease;
+
+    .inhoudsslider-list {
+      list-style: none;
+      padding: 0;
+
+      li {
+
+        a {
+          margin: 20px 0;
+          display: block;
+          background-color: transparent;
+          color: $brand-primary;
+          font-family: "FelbridgeBold", sans-serif;
+          padding: 18px 20px 18px 100px;
+          //border-radius: 5px;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+          font-size: 22px;
+          line-height: 26px;
+
+          transition: all .3s ease;
+
+          &:active,
+          &:focus,
+          &:hover {
+            text-decoration: none;
+            background-color: rgba($brand-primary, 0.3);
+          }
+
+          &.active {
+            background-color: $brand-primary;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .inhoudsslider-list-content {
+      list-style: none;
+      padding: 30px 0;
+
+      li {
+        padding: 0;
+
+        p {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
