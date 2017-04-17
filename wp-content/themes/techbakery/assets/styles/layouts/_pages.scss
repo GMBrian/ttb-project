@@ -19,6 +19,21 @@ body .main {
   }
 }
 
+@media (max-width: 767px) {
+  .section.section-banner .banner-bubble-container {
+    position: relative !important;
+  }
+
+  .section.section-banner .banner-bubble {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}
+
+#wat {
+  margin-bottom: -30px;
+}
+
 .section {
   margin-bottom: 50px;
 
@@ -33,7 +48,7 @@ body .main {
     z-index: 5;
     font-family: "FelbridgeBold", sans-serif;
     padding: 16px 40px 16px 100px;
-    margin-top: -50px;
+    margin-top: -30px;
     //border-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -91,6 +106,7 @@ body .main {
 
   &.section-tekst {
     padding: 30px 0;
+    margin-bottom: 0;
 
     .entry-content {
       display: flex;

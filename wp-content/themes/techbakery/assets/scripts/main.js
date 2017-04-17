@@ -110,7 +110,7 @@
         $('.nav-primary .nav a[href*=\\#]').on('click', function (event) {
             $('html,body').animate(
                 {
-                    scrollTop: $(this.hash).offset().top - 105
+                    scrollTop: $(this.hash).offset().top - $('.banner').height() + 5
                 },
                 500
             );
@@ -175,7 +175,7 @@
             console.log(refElement);
 
             refElement.each(function () {
-                if ($(this).position().top <= scrollPos && $(this).position().top + $(this).height() > scrollPos) {
+                if ($(this).position().top - 45 <= scrollPos && $(this).position().top + $(this).height() > scrollPos) {
                     $('.nav-primary ul li').removeClass("hovering");
                     currLink.closest('li').addClass("hovering");
                 }

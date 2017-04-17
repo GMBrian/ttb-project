@@ -27,17 +27,17 @@ if ( have_rows( 'secties' ) ):
 				<div class="row entry-content">
 
 					<div
-						class="<?php echo get_sub_field( 'meer_weten_kolom' ) ? 'col-lg-7 col-lg-push-1 col-md-12' : 'col-lg-10 col-lg-push-1 col-md-12' ?>">
+						class="<?php echo get_sub_field( 'meer_weten_kolom' ) ? 'col-lg-7 col-lg-push-1 col-md-12' : 'col-lg-7 col-lg-push-1 col-md-12' ?>">
 						<?= get_sub_field( 'tekst' ); ?>
 					</div>
-					<?php if ( get_sub_field( 'meer_weten_kolom' ) ) : ?>
-						<div class="col-lg-2 col-lg-push-2 col-md-12 cta-section">
+					<div class="col-lg-2 col-lg-push-2 col-md-12 cta-section">
+						<?php if ( get_sub_field( 'meer_weten_kolom' ) ) : ?>
 							<p>
 								Meer weten?<br>Bel ons <?= get_field( 'telefoonnummer', 'options' ); ?><br>of mail <a
 									href="mailto:<?= get_field( 'e-mailadres', 'options' ); ?>"><?= get_field( 'e-mailadres', 'options' ); ?></a>
 							</p>
-						</div>
-					<?php endif; ?>
+						<?php endif; ?>
+					</div>
 
 				</div>
 
