@@ -105,7 +105,9 @@
             return false;
         });
 
-        inhoudsSlider[0].click();
+        if(inhoudsSlider.length > 0) {
+            inhoudsSlider[0].click();
+        }
 
         $('.nav-primary .nav a[href*=\\#]').on('click', function (event) {
             $('html,body').animate(
